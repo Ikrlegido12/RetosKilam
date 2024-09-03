@@ -12,8 +12,7 @@ public final class RetosKilam extends JavaPlugin {
     public final String version = getDescription().getVersion();
     @Override
     public void onEnable() {
-        // Plugin startup logic
-        new MobAttractionTask().runTaskTimer(this, 0L, 1L);
+        new MobAttractionTask().runTaskTimer(this, 0L, 1L); //BukkitRunnable
         registerEvents();
         registerCommands();
         Bukkit.getConsoleSender().sendMessage(
@@ -22,7 +21,6 @@ public final class RetosKilam extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
         Bukkit.getConsoleSender().sendMessage(
                 ChatColor.translateAlternateColorCodes('&',prefix+"Sistema desactivado. &eVersión:&6 "+version));
 
