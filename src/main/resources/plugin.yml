@@ -1,0 +1,11 @@
+name: RetosKilam
+version: '1.0-SNAPSHOT'
+main: rk.Ikrlegido12.retosKilam.RetosKilam
+api-version: '1.19'
+commands:
+  RetosKilam:
+    description: Plugin hecho para hacer retos.
+    alisases:
+      - rk
+      - retos
+      - kilam
