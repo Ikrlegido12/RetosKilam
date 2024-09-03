@@ -1,5 +1,5 @@
 name: RetosKilam
-version: '1.0-SNAPSHOT'
+version: '1.7-RELEASE'
 main: rk.Ikrlegido12.retosKilam.RetosKilam
 api-version: '1.19'
 commands:

@@ -19,8 +19,8 @@ public class PlayerListener implements Listener {
         Player player = event.getEntity(); // obtener jugador
         Location deathLocation = event.getEntity().getLocation(); // obtener ubicacion
         String name = event.getEntity().getName(); // obtener String del IGN
-        Bukkit.getBanList(BanList.Type.NAME).addBan(name, ChatColor.translateAlternateColorCodes('&',"&4Has MUERTO."),null,"RetosKilam");
-        player.kickPlayer(ChatColor.translateAlternateColorCodes('&',"&4Has MUERTO."));
+        Bukkit.getBanList(BanList.Type.NAME).addBan(name, ChatColor.translateAlternateColorCodes('&',plugin.getMainConfigManager().getBanMessage()),null,"RetosKilam");
+        player.kickPlayer(ChatColor.translateAlternateColorCodes('&',plugin.getMainConfigManager().getBanMessage()));
 
 
         //generado por ChatGPT

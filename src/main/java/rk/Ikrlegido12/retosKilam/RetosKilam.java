@@ -4,12 +4,15 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import rk.Ikrlegido12.retosKilam.commands.MainCommand;
+import rk.Ikrlegido12.retosKilam.config.MainConfigManager;
 import rk.Ikrlegido12.retosKilam.listeners.EntityListener;
 import rk.Ikrlegido12.retosKilam.listeners.PlayerListener;
 
 public final class RetosKilam extends JavaPlugin {
     public final String prefix = "&7[&bRetos&1Kilam&7]&f ";
     public final String version = getDescription().getVersion();
+    private MainConfigManager mainConfigManager;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
@@ -33,5 +36,8 @@ public final class RetosKilam extends JavaPlugin {
     public void registerEvents(){
         getServer().getPluginManager().registerEvents(new PlayerListener(this),this);
         getServer().getPluginManager().registerEvents(new EntityListener(this),this);
+    }
+    public MainConfigManager getMainConfigManager() {
+        return mainConfigManager;
     }
 }
