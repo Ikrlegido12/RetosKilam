@@ -33,6 +33,7 @@ public class MainCommand implements CommandExecutor {
         } else if(args[0].equalsIgnoreCase("reload")){
             subCommandReload(sender);
         }
+        help(sender);
         return true;
     }
 

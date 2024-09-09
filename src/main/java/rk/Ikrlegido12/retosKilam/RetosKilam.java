@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import rk.Ikrlegido12.retosKilam.commands.MainCommand;
 import rk.Ikrlegido12.retosKilam.config.MainConfigManager;
 import rk.Ikrlegido12.retosKilam.listeners.EntityListener;
+import rk.Ikrlegido12.retosKilam.listeners.InventoryListener;
 import rk.Ikrlegido12.retosKilam.listeners.PlayerListener;
 
 public final class RetosKilam extends JavaPlugin {
@@ -34,6 +35,7 @@ public final class RetosKilam extends JavaPlugin {
     public void registerEvents(){
         getServer().getPluginManager().registerEvents(new PlayerListener(this),this);
         getServer().getPluginManager().registerEvents(new EntityListener(this),this);
+        getServer().getPluginManager().registerEvents(new InventoryListener(this),this);
     }
     public MainConfigManager getMainConfigManager() {
         return mainConfigManager;
